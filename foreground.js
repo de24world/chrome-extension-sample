@@ -10,3 +10,8 @@ second.id = "second";
 
 document.querySelector("body").appendChild(first);
 document.querySelector("body").append(second);
+
+first.addEventListener("click", () => {
+  chrome.storage.local.set({ password: "123" });
+  console.log("I SET DATA");
+});
